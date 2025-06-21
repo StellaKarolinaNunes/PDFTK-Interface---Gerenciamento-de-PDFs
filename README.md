@@ -208,8 +208,6 @@ Sinta-se livre para usar, modificar e distribuir, sempre mantendo referência ao
 
 - [Stella Karolina Nunes Peixoto](https://github.com/StellaKarolinaNunes)
 
-- *Professor* [Deriks Karlay Dias Costa](https://github.com/karlaycosta)
-
 ---
 
 > _Projeto acadêmico IFPA | Ciência da Computação – Interface Bash para PDFTK, referência para automações de manipulação de PDF via terminal._
