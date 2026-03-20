@@ -57,6 +57,13 @@ A **PDFTK Interface** é uma ferramenta que automatiza tarefas comuns de manipul
 
 <br>
 
+ ## Layout da Aplicação 
+
+<p align="center">
+  <img src="./assets/images/tela_principal.png" width="24%" alt="tela_principal" </p>
+
+ <br>
+
 ---
 
  ##  Estrutura de Pastas
