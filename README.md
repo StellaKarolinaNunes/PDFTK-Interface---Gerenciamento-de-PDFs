@@ -209,5 +209,6 @@ mantendo a referência ao repositório original.
   </tr>
 </table>
 
+ <br>
 
 > _Projeto acadêmico IFPA | Ciência da Computação – Sistema de Backup em Shell Script para automação e aprendizado de rotinas de PDFTK Interface Gerenciamento de PDFs no Linux._
