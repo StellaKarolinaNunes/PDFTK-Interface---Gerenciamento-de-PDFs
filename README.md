@@ -1,214 +1,416 @@
-<h1 align="center">
-    PDFTK Interface - Gerenciamento de PDFs
- <br />
- <br />
- <a href="https://github.com/StellaKarolinaNunes/PDFTK-Interface---Gerenciamento-de-PDFs">
-  <img src="./assets/images/banner.png" alt="PDFTK Interface Banner" width="100%">
- </a>
-</h1>
+<div align="center">
+
+# PDFTK Interface
+
+### Ferramenta em Bash para gerenciamento de arquivos PDF no terminal
+
+<a href="https://github.com/StellaKarolinaNunes/PDFTK-Interface---Gerenciamento-de-PDFs">
+  <img src="./assets/images/banner.png" alt="Banner do projeto PDFTK Interface" width="100%">
+</a>
+
+<br>
+
+<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
+
+<img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash">
+
+<img src="https://img.shields.io/badge/PDFTK-PDF%20Toolkit-D32F2F?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="PDFTK">
+
+<img src="https://img.shields.io/badge/Terminal-111111?style=for-the-badge&logo=windowsterminal&logoColor=white" alt="Terminal">
+
+<img src="https://img.shields.io/badge/Status-Concluído-2EA44F?style=for-the-badge" alt="Status do projeto">
+
+<br><br>
 
 <p align="center">
-  <img src="https://img.shields.io/static/v1?label=shell&message=bash&color=blue&style=for-the-badge&logo=gnu-bash"/>
-  <img src="https://img.shields.io/static/v1?label=PDFTK&message=CLI&color=blue&style=for-the-badge&logo=adobe-acrobat-reader"/>
-  <img src="https://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
-  <img src="https://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=green&style=for-the-badge"/>
+  <a href="https://github.com/StellaKarolinaNunes/PDFTK-Interface---Gerenciamento-de-PDFs">
+    <img src="https://img.shields.io/badge/⌘%20Explorar%20Código--Fonte-181717?style=for-the-badge&logo=github&logoColor=white" alt="Explorar Código-Fonte">
+  </a>
+  <a href="./fluxograma/FLUXOGRAMA.md">
+    <img src="https://img.shields.io/badge/◈%20Ver%20Fluxograma%20do%20Sistema-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Ver Fluxograma do Sistema">
+  </a>
 </p>
 
-<br>
+</div>
 
 ---
 
----
+## Sobre o projeto
 
-##  Introdução
-Este projeto foi desenvolvido como parte da disciplina de Shell Script no curso de Ciência da Computação. Ele consiste em uma interface em Bash criada para facilitar o uso do PDFTK no gerenciamento de arquivos PDF, tornando operações como divisão, rotação, criptografia, concatenação e recuperação de PDFs muito mais acessíveis via terminal. O objetivo é simplificar tarefas comuns do dia a dia com PDFTK, centralizando todas as funcionalidades em um menu interativo e amigável.
+O **PDFTK Interface** é uma ferramenta desenvolvida em **Shell Script com Bash** para simplificar o gerenciamento de arquivos PDF diretamente no terminal Linux.
 
-<br>
+A aplicação oferece uma interface interativa para facilitar o uso do **PDFTK**, reunindo em um único menu operações como divisão, rotação, concatenação, criptografia, recuperação de arquivos e aplicação de marca d'água.
 
-## Por que PDFTK Interface?
-O PDFTK é uma ferramenta poderosa para manipulação de arquivos PDF, mas sua interface de linha de comando pode ser intimidadora para usuários iniciantes. Este projeto visa democratizar o acesso ao PDFTK, oferecendo uma interface amigável e interativa que permite realizar operações complexas com apenas alguns cliques. Além disso, o projeto serve como uma ferramenta educacional, demonstrando o potencial do Shell Script para automatizar tarefas repetitivas e criar interfaces personalizadas para ferramentas de linha de comando.
+O projeto foi desenvolvido como atividade acadêmica da disciplina de **Shell Script**, com foco na automação de tarefas, organização de scripts em módulos, validação de arquivos e uso de ferramentas de linha de comando.
 
-<br>
-
-## A Solução
-A **PDFTK Interface** é uma ferramenta que automatiza tarefas comuns de manipulação de PDF, oferecendo uma interface amigável e interativa para o usuário. Com ela, é possível realizar operações como divisão, rotação, criptografia, concatenação e recuperação de PDFs com apenas alguns cliques, sem a necessidade de memorizar comandos complexos.
-
-<br>
-
-## Funcionalidades Principais
-
-* **Instalar PDFTK facilmente**
-* **Dividir páginas de um arquivo PDF**
-* **Girar páginas específicas ou o PDF todo**
-* **Criptografar arquivos PDF**
-* **Adicionar marca d'água (background)**
-* **Recuperar PDFs corrompidos**
-* **Concatenar (unir) múltiplos arquivos PDF**
-* **Menu interativo para fácil navegação**
-* **Desinstalar PDFTK facilmente**
-* **Divisão de PDFs**
-* **Rotação de Páginas**
-* **Criptografia Segura**
-* **Marca d'água Profissional**
-* **Recuperar Arquivos**
-* **Concatenação de Múltiplos PDFs**
-* **Gestão de Dependências**
-* **Validação em Tempo Real**
-
-<br>
-
- ## Layout da Aplicação 
-
-<p align="center">
-  <img src="./assets/images/tela_principal.png" width="24%" alt="tela_principal" </p>
-
- <br>
+> Este projeto foi desenvolvido para fins educacionais e de portfólio. Antes de manipular documentos importantes, recomenda-se testar as operações em cópias dos arquivos originais.
 
 ---
 
- ##  Estrutura de Pastas
+## Objetivo
 
- A estrutura do projeto segue o padrão de organização por camadas, facilitando a manutenção e escalabilidade.
+O objetivo do projeto é tornar tarefas comuns de manipulação de PDFs mais acessíveis para usuários que não desejam memorizar comandos extensos do PDFTK.
 
-```bash
-pdftk-interface/
-├── modules/                  # Módulos do sistema
-│   ├── setup.sh        # Instalação, Desinstalação e Dependências
-│   └── ops.sh          # Operações de manipulação de PDF
-├── fluxograma/         # Documentação de fluxo
-│   └── FLUXOGRAMA.md
-├── pdftk.sh            # Arquivo principal (Menu)
-├── README.md           # Documentação geral
-├── assets/                   # Recursos estáticos
+A ferramenta busca demonstrar conceitos importantes de programação em Bash, como:
+
+* criação de menus interativos;
+* modularização de scripts;
+* validação de arquivos e diretórios;
+* instalação e gerenciamento de dependências;
+* automação de comandos;
+* tratamento básico de erros;
+* manipulação de documentos no terminal;
+* organização de fluxos de execução.
+
+---
+
+## Problema
+
+O PDFTK é uma ferramenta poderosa para manipular documentos PDF, mas seus comandos podem ser pouco intuitivos para usuários iniciantes.
+
+Operações como dividir páginas, unir arquivos, aplicar senha, rotacionar documentos ou recuperar PDFs corrompidos normalmente exigem conhecimento prévio dos parâmetros utilizados no terminal.
+
+O PDFTK Interface foi criado para centralizar essas operações em um menu organizado, reduzindo a complexidade do uso direto da ferramenta.
+
+---
+
+## Solução desenvolvida
+
+A solução consiste em uma interface de terminal construída em Bash que organiza as funcionalidades do PDFTK em opções guiadas.
+
+O script principal apresenta o menu e direciona o usuário para módulos específicos. Esses módulos concentram funções relacionadas à instalação do PDFTK, verificação de dependências e execução das operações de manipulação de PDF.
+
+A estrutura permite adicionar novos recursos sem concentrar toda a lógica em um único arquivo.
+
+---
+
+## Funcionalidades
+
+* **Instalação do PDFTK:** verificação e instalação da ferramenta quando necessário.
+* **Desinstalação do PDFTK:** remoção da dependência por meio do menu.
+* **Divisão de PDFs:** separação de páginas ou intervalos de páginas de um documento.
+* **Rotação de Páginas:** rotação de páginas específicas ou do arquivo completo.
+* **Concatenação de PDFs:** união de vários documentos em um único arquivo.
+* **Criptografia:** proteção de arquivos PDF com senha.
+* **Marca d'água:** aplicação de arquivo PDF como plano de fundo em outro documento.
+* **Recuperação de PDFs:** tentativa de recuperação de arquivos corrompidos.
+* **Validação de Arquivos:** verificação de existência e extensão dos documentos informados.
+* **Menu Interativo:** navegação organizada diretamente pelo terminal.
+* **Organização Modular:** separação entre setup, dependências e operações de PDF.
+* **Fluxograma do Sistema:** documentação visual do fluxo principal da aplicação.
+
+---
+
+## Tecnologias utilizadas
+
+| Tecnologia | Aplicação no projeto                                    |
+| ---------- | ------------------------------------------------------- |
+| Bash       | Linguagem principal dos scripts                         |
+| GNU Bash   | Interpretador para execução no terminal                 |
+| PDFTK      | Manipulação, divisão, união, rotação e proteção de PDFs |
+| Snap       | Instalação e gerenciamento da dependência PDFTK         |
+| Linux      | Ambiente principal de execução                          |
+| Mermaid    | Diagramação do fluxograma                               |
+| Git        | Controle de versão                                      |
+| GitHub     | Hospedagem do repositório                               |
+
+---
+
+## Destaques técnicos
+
+* Aplicação executada totalmente no terminal;
+* Interface guiada por menu interativo;
+* Separação entre script principal, setup e operações;
+* Automação de comandos do PDFTK;
+* Validação de arquivos antes da execução;
+* Estrutura preparada para novas operações;
+* Redução da complexidade de comandos manuais;
+* Uso de ferramentas nativas do ecossistema Linux;
+* Projeto voltado para aprendizado de Bash e automação.
+
+---
+
+## Fluxo de funcionamento
+
+```text
+Usuário inicia o sistema
+        │
+        ▼
+Menu principal exibido
+        │
+        ├── Instalar ou verificar PDFTK
+        ├── Dividir PDF
+        ├── Rotacionar PDF
+        ├── Concatenar PDFs
+        ├── Criptografar PDF
+        ├── Aplicar marca d'água
+        ├── Recuperar PDF
+        ├── Desinstalar PDFTK
+        └── Sair
+        │
+        ▼
+Usuário informa os arquivos necessários
+        │
+        ▼
+Sistema valida os caminhos informados
+        │
+        ▼
+Comando PDFTK é executado
+        │
+        ▼
+Arquivo resultante é salvo no destino escolhido
 ```
 
-<br>
+> Para visualizar a lógica detalhada do sistema, consulte o arquivo [FLUXOGRAMA.md](./fluxograma/FLUXOGRAMA.md).
 
->  **Fluxograma do Projeto**: Caso queira entender a lógica de navegação e processos do aplicativo, acesse o arquivo [fluxograma/FLUXOGRAMA.md](fluxograma/FLUXOGRAMA.md).
+---
 
+## Preview
 
-##  Instalação
+<div align="center">
 
-### Pré-requisitos para Rodar PDFTK Interface na sua máquina 
+<img src="./assets/images/tela_principal.png" width="42%" alt="Tela principal do PDFTK Interface">
 
-* [Bash Shell](https://www.gnu.org/software/bash/)
-* [Snap](https://snapcraft.io/) (para instalar o PDFTK)
-* [PDFTK](https://snapcraft.io/pdftk) (instalado pelo próprio script)
-* Permissões de sudo para instalar dependências
+</div>
 
-<br>
+---
 
-###  Instalação Rápida
+## Estrutura do projeto
 
-#### 1. **Clone este repositório:**
-    ```bash
-    git clone https://github.com/StellaKarolinaNunes/PDFTK-Interface---Gerenciamento-de-PDFs
-    cd PDFTK-Interface---Gerenciamento-de-PDFs
-    ```
+```bash
+PDFTK-Interface---Gerenciamento-de-PDFs/
+├── assets/
+│   └── images/
+│       ├── banner.png
+│       └── tela_principal.png
+│
+├── fluxograma/
+│   └── FLUXOGRAMA.md
+│
+├── modules/
+│   ├── setup.sh
+│   └── ops.sh
+│
+├── pdftk.sh
+├── LICENSE
+└── README.md
+```
 
-#### 2. **Dê permissão de execução ao script:**
-    ```bash
-    chmod +x pdftk.sh
-    ```
+### Responsabilidade dos arquivos
 
-#### 3. **Execute o script:**
-    ```bash
-    ./pdftk.sh
-    ```
+| Arquivo                    | Responsabilidade                                        |
+| -------------------------- | ------------------------------------------------------- |
+| `pdftk.sh`                 | Arquivo principal com o menu interativo                 |
+| `modules/setup.sh`         | Instalação, desinstalação e verificação de dependências |
+| `modules/ops.sh`           | Operações de manipulação de arquivos PDF                |
+| `fluxograma/FLUXOGRAMA.md` | Fluxograma e documentação visual do sistema             |
 
-> **Dica:** O PDFTK será instalado automaticamente se não estiver presente.
+---
 
-<br>
+## Como executar o projeto
 
-##  Roadmap
+### Pré-requisitos
 
+Antes de iniciar, é necessário ter instalado:
 
-###     Fase 1: Estabilidade e UX (Atual)
-- [x] Interface modularizada.
-- [x] Verificação automática de dependências.
-- [x] Validação de existência de arquivos.
-- [x] Barra de progresso para instalações.
+* sistema operacional Linux ou ambiente compatível com Bash;
+* GNU Bash;
+* Git;
+* `snapd`, caso a instalação do PDFTK seja realizada via Snap;
+* permissões administrativas para instalação de dependências;
+* permissões de leitura e escrita nos diretórios utilizados.
 
-### Fase 2: Produtividade e Lote
-- [ ] **Processamento em Lote (Batch)**: Opção para aplicar a mesma operação em todos os PDFs de uma pasta.
-- [ ] **Nomenclatura Customizada**: Permitir que o usuário digite o nome do arquivo de saída.
-- [ ] **Extração de Texto**: Integração com ferramentas para converter PDF em TXT.
+### 1. Clone o repositório
 
-### Fase 3: Recursos Avançados
-- [ ] **Conversão de Formatos**: Converter Imagens (JPG/PNG) para PDF e vice-versa.
-- [ ] **Compressão de PDF**: Função para reduzir o tamanho dos arquivos PDF.
-- [ ] **Edição de Metadados**: Visualizar e editar título, autor e metadados.
+```bash
+git clone https://github.com/StellaKarolinaNunes/PDFTK-Interface---Gerenciamento-de-PDFs.git
+```
 
-### Fase 4: Ecossistema e Acessibilidade
-- [ ] **Instalação Global**: Script para adicionar o projeto ao PATH do sistema.
-- [ ] **Interface Gráfica (GUI)**: Versão usando `zenity` ou `yad` para janelas.
+### 2. Acesse a pasta do projeto
 
-<br>
+```bash
+cd PDFTK-Interface---Gerenciamento-de-PDFs
+```
 
-##  Contribuição
-Contribuições são muito bem-vindas! Siga estes passos:
+### 3. Dê permissão de execução ao script
 
-### Como Contribuir
-1. **Fork** este repositório como cotribuir completo,sem comentario e emogi profissional e atraente e copleto
-2. 
-3. **Clone** seu fork localmente
-4. **Crie** uma branch para sua feature: `git checkout -b feature/nova-funcionalidade`
-5. **Faça** suas alterações e commits
-6. **Teste** suas modificações
-7. **Abra** um Pull Request detalhado
+```bash
+chmod +x pdftk.sh
+```
 
-<br>
+### 4. Execute a ferramenta
 
-###  Diretrizes
+```bash
+./pdftk.sh
+```
 
-- Código limpo e bem comentado
-- Mensagens de commit claras e objetivas
-- Teste todas as funcionalidades
-- Mantenha a documentação atualizada
-- Siga os padrões de código existentes
+> O sistema verifica a disponibilidade do PDFTK e apresenta opções para instalação quando necessário.
 
-<br>
+---
 
-##  Licença
+## Exemplo de uso
+
+```bash
+./pdftk.sh
+```
+
+Após iniciar, escolha uma operação no menu:
+
+```text
+1. Instalar PDFTK
+2. Dividir PDF
+3. Rotacionar PDF
+4. Concatenar PDFs
+5. Criptografar PDF
+6. Adicionar marca d'água
+7. Recuperar PDF
+8. Desinstalar PDFTK
+0. Sair
+```
+
+Em seguida, informe os caminhos solicitados e acompanhe o resultado exibido no terminal.
+
+---
+
+## Boas práticas de uso
+
+* Mantenha uma cópia original dos documentos antes de editá-los;
+* Verifique os caminhos dos arquivos antes de confirmar uma operação;
+* Utilize senhas fortes ao proteger PDFs;
+* Teste a recuperação ou restauração de arquivos em uma pasta separada;
+* Evite sobrescrever o documento original sem confirmação;
+* Não compartilhe documentos sensíveis sem autorização;
+* Confirme se o arquivo de saída foi criado corretamente antes de remover cópias anteriores.
+
+---
+
+## Roadmap
+
+### Estabilidade e experiência
+
+* [x] Interface modularizada em Bash;
+* [x] Menu interativo no terminal;
+* [x] Verificação básica de dependências;
+* [x] Validação de existência de arquivos;
+* [x] Instalação e desinstalação do PDFTK;
+* [x] Barra de progresso durante instalação;
+* [x] Divisão, rotação e concatenação de PDFs;
+* [x] Proteção de arquivos PDF;
+* [x] Aplicação de marca d'água;
+* [x] Recuperação básica de PDFs.
+
+### Produtividade
+
+* [ ] Processamento em lote para uma pasta inteira;
+* [ ] Personalização do nome do arquivo de saída;
+* [ ] Histórico das últimas operações;
+* [ ] Registro de logs com data e status;
+* [ ] Extração de texto de documentos PDF;
+* [ ] Pré-visualização de informações do arquivo;
+* [ ] Contagem de páginas antes da operação.
+
+### Recursos avançados
+
+* [ ] Conversão de imagens para PDF;
+* [ ] Conversão de PDF para imagens;
+* [ ] Compressão de arquivos PDF;
+* [ ] Edição de metadados;
+* [ ] Mesclagem com ordem personalizada;
+* [ ] Extração de páginas específicas;
+* [ ] Criação de PDFs protegidos com permissões específicas.
+
+### Evoluções futuras
+
+* [ ] Instalação global pelo `PATH`;
+* [ ] Interface gráfica com `zenity` ou `yad`;
+* [ ] Suporte a diferentes distribuições Linux;
+* [ ] Integração com armazenamento em nuvem;
+* [ ] Notificações de conclusão de tarefas;
+* [ ] Testes automatizados para módulos Bash.
+
+---
+
+## Contribuição
+
+Contribuições são bem-vindas.
+
+```bash
+# Faça um fork do repositório no GitHub
+
+# Clone o seu fork
+git clone https://github.com/SEU-USUARIO/PDFTK-Interface---Gerenciamento-de-PDFs.git
+
+# Acesse a pasta do projeto
+cd PDFTK-Interface---Gerenciamento-de-PDFs
+
+# Crie uma branch para sua alteração
+git checkout -b feature/nova-funcionalidade
+
+# Dê permissão de execução ao script
+chmod +x pdftk.sh
+
+# Teste o projeto
+./pdftk.sh
+
+# Adicione as alterações
+git add .
+
+# Crie um commit descritivo
+git commit -m "feat: adiciona nova funcionalidade"
+
+# Envie a branch para o GitHub
+git push origin feature/nova-funcionalidade
+```
+
+Depois, abra um Pull Request explicando:
+
+* qual problema foi resolvido;
+* quais arquivos foram alterados;
+* como a funcionalidade foi testada;
+* quais operações de PDF foram impactadas;
+* se existem novas dependências.
+
+### Diretrizes
+
+* Mantenha o código organizado e comentado;
+* Preserve a divisão entre módulos;
+* Utilize nomes claros para funções e variáveis;
+* Valide os arquivos informados pelo usuário;
+* Evite sobrescrever documentos sem confirmação;
+* Não inclua PDFs pessoais ou documentos sensíveis no repositório;
+* Atualize o README ao adicionar novas operações;
+* Preserve compatibilidade com GNU Bash.
+
+---
+
+## Licença
 
 Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
-``` bash
-MIT License - você pode usar, modificar e distribuir livremente,
-mantendo a referência ao repositório original.
+```text
+MIT License
+
+Você pode usar, modificar e distribuir este projeto,
+desde que mantenha os créditos e a referência ao repositório original.
 ```
 
- <br>
- 
- ## Créditos
+---
 
- O **PDFTK Interface** é construído com o apoio de tecnologias e comunidades incríveis:
+## Créditos
 
- - **Motor Principal:** [PDFTK - PDF Labs](https://www.pdflabs.com/)
- - **Gestão de Dependências:** [Snapcraft](https://snapcraft.io/)
- - **Framework de Execução:** [Bash Shell](https://www.gnu.org/software/bash/)
- - **Diagramação:** [Mermaid.js](https://mermaid.live/)
- - **Badges e Design:** [Shields.io](https://shields.io/)
- - **Professor Orientador:** [Alex Santos de Oliveira](https://github.com/alex2024383)
+### Desenvolvimento e contexto acadêmico
 
- <br>
+* **Desenvolvimento principal:** [Stella Karolina Nunes](https://github.com/StellaKarolinaNunes)
+* **Instituição:** Instituto Federal de Educação, Ciência e Tecnologia do Pará — Campus Tucuruí
+* **Curso:** Bacharelado em Ciência da Computação
+* **Disciplina:** Shell Script
+* **Professor orientador:** [Alex Santos de Oliveira](https://github.com/alex2024383)
 
- 
-### Desenvolvimento Principal
+### Tecnologias e recursos
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/StellaKarolinaNunes">
-        <img src="https://github.com/StellaKarolinaNunes.png" width="100px" alt="Stella Karolina"/>
-        <br />
-        <sub><b>Stella Karolina (Desenvolvedora)</b></sub>
-        <br />
-      </a>
-    </td>
-  </tr>
-</table>
-
- <br>
-
-> _Projeto acadêmico IFPA | Ciência da Computação – Sistema de Backup em Shell Script para automação e aprendizado de rotinas de PDFTK Interface Gerenciamento de PDFs no Linux._
+* **Automação e scripts:** [GNU Bash](https://www.gnu.org/software/bash/)
+* **Manipulação de PDFs:** [PDFTK](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/)
+* **Gerenciamento de dependências:** [Snapcraft](https://snapcraft.io/)
+* **Fluxogramas:** [Mermaid](https://mermaid.js.org/)
+* **Controle de versão:** Git e GitHub
+* **Badges:** [Shields.io](https://shields.io/)
